@@ -13,7 +13,7 @@ const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000)
 const renderer = new THREE.WebGLRenderer({ canvas })
 const orbitControl = new OrbitControls(camera, canvas)
-camera.position.set(0, 1, 2)
+camera.position.set(0, 1, 4)
 camera.lookAt(0, 0, 0)
 renderer.setSize(width, height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
@@ -23,8 +23,8 @@ orbitControl.enableDamping = true
 
 const gui = new debug.GUI({ width: 360 })
 const debugObject = {
-  totalStars: 10000,
-  radius: 2,
+  totalStars: 40000,
+  radius: 6,
   branch: 8,
   randomness: 0.1,
   power: 4,
